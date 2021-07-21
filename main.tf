@@ -3,7 +3,7 @@ module "autoscaling" {
   namespace   = var.namespace
   ssh_keypair = var.ssh_keypair
   vpc         = module.networking.vpc #Input arguments for the autoscaling module set by other module's output. 
-  sg          = module.netowrking.sg
+  sg          = module.networking.sg
   db_config   = module.database.db_config
 }
 
