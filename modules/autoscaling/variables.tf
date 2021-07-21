@@ -1,25 +1,25 @@
 variable "namespace" {
-    type = string
+  type = string
 }
 
 variable "ssh_keypair" {
-    type = string
+  type = string
 }
 
 variable "vpc" {
-    type = any
+  type = any
 }
 
-variable "db_config" {   #Enforces a strict type schema for db_config object. The value set for this variable must implement the same type schema.
-    type = object(
-        {
-            user = string
-            password = string
-            database = string
-            hostname = string
-            port = string
-        }
-    )
+variable "db_config" { #Enforces a strict type schema for db_config object. The value set for this variable must implement the same type schema.
+  type = object(
+    {
+      user     = string
+      password = string
+      database = string
+      hostname = string
+      port     = string
+    }
+  )
 }
 
 
